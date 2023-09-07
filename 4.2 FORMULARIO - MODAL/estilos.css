@@ -1,0 +1,89 @@
+body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.boton-abrir{
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boton-abrir:hover{
+    background: #459fff;
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);/*fondo semitrasnparente*/
+    display: none;/*ocultar el modal*/
+    position: fixed;/*fija el modal*/
+    left: 0;
+    top: 0;
+    z-index: 1;/*se superpone*/
+}
+.contenido-modal {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.cerrar-modal {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: #f00;
+}
+
+.formulario label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario input[type="date"],
+.formulario select,
+.formulario input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.enviar{
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.enviar:hover{
+    background-color: #459fff;
+}
+
+.limpiar{
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.limpiar:hover{
+    background-color: #ff7373;
+}

@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;/*si se sobresale el contenido se oculta*/
+}
+
+/*Estilos para el header*/
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: #224fb1;
+    color: #ffffff;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+/*Estilos para el span*/
+header span {
+    font-size: 25px;
+}
+
+/*Estilos para el icono*/
+header .menu-icon {
+    /*0->para la parte inferior y superior - 25px->para la derecha y izquierda*/
+    margin: 0 25px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/*Cuando se abra el menu*/
+header.activo {
+    margin-left: 300px;
+}
+
+/*Estilos para el menu lateral*/
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    padding: 20px 0;
+    /*20px para superior y inferior*/
+    margin: 0;
+    background: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.menu-lateral li {
+    padding: 20px 10px;
+}
+
+/*Estilos para cotenido del menu lateral*/
+.link {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.link .icon {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.desplegar-icon {
+    color: #000;
+    margin-left: auto;
+    font-size: 15px;
+}
+
+.link span {
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.link:hover {
+    background: #92c3f8;
+}
+
+.link:hover .icon,
+.link:hover span,
+.link:hover .desplegar-icon {
+    color: #224fb1;
+}
+
+/*Estilos para el submenu*/
+.sub-menu {
+    padding: 10px 20px;
+    background: #EBEBEB;
+    display: none;
+}
+
+.sub-menu .sub-icon {
+    margin-right: 14px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.sub-menu li {
+    padding: 5px 5px;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sub-menu a {
+    color: #000000;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.sub-menu li:hover {
+    background: #92c3f8;
+}
+
+.sub-menu li:hover .sub-icon,
+.sub-menu li:hover a {
+    color: #224fb1;
+}
+
+/*Ocultar el submenu*/
+.sub-menu.mostrar {
+    display: block;
+}
+
+/*Cuando se abra el menu*/
+.menu-lateral.activo {
+    left: 0;
+}
+
+/*Estilos para el contenido*/
+.contenido {
+    padding: 15px;
+    margin-left: 0;
+    /* Margen izquierdo inicialmente 0 */
+    transition: margin-left 0.3s ease;
+}
+
+/*Cuando se abra el menu*/
+.contenedor.activo .menu-lateral {
+    left: 0;
+}
+
+.contenedor.activo .contenido {
+    margin-left: 300px;
+}
+
+/*Estilos para horario*/
+#contenidoHorario {
+    padding: 0px 50px;
+}
+
+#btn-pdf {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 5px 10px;
+
+}
+
+#txt-horaria {
+    text-align: right;
+    font-size: 25px;
+    font-weight: 500;
+    color: #7a7a7a;
+}
+
+/*Estilos para la asistencia*/
+.contenido-asis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#contenido-uno {
+    padding: 20px;
+    width: 70%;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lef-opci {
+    text-align: left;
+}
+
+#contenido-uno p,
+#contenido-uno button {
+    text-align: center;
+}
+
+.posicion-botones button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/*Estilos para la asistencia - meses 2023*/
+.contenedor-meses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-meses {
+    width: 70%;
+    height: auto;
+}
+
+.mes {
+    cursor: pointer;
+    background: #EBEBEB;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mes:hover {
+    background: #224fb1;
+    color: #ffffff;
+}
+
+.info {
+    display: none;
+    margin-top: 10px;
+}
+
+.cont-tabla {
+    text-align: center;
+}
+
+.resumen {
+    text-align: center;
+    padding: 5px; 
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

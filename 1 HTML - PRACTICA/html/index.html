@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PAGINA - HTML</title><!--Titulo pagina-->
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<h1>Titulo Principal</h1>
+	<h2>Titulo 1</h2>
+	<h3>Subtitulo 1</h3>
+	<p> <strong>Lorem ipsum</strong>, dolor sit amet consectetur adipisicing elit. Perferendis doloribus ducimus impedit, deserunt molestias quisquam sequi! Autem, vero harum expedita accusantium animi laudantium eligendi omnis alias dicta, sint inventore necessitatibus.
+	<a href="informacion.html" target="_blank">Mas informacion</a>
+	</p>
+
+
+	<h2>Titulo 2</h2>
+	<h3>Subtitulo 1</h3>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis doloribus ducimus impedit, deserunt molestias quisquam sequi! Autem, vero harum expedita accusantium animi laudantium eligendi omnis alias dicta, sint inventore necessitatibus.
+	<img src="img/php.jpg" alt="Imagen PHP" width="500">
+	</p>
+
+	<h3>Subtitulo 2</h3>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis doloribus ducimus impedit, deserunt molestias quisquam sequi! Autem, vero harum expedita accusantium animi laudantium eligendi omnis alias dicta, sint inventore necessitatibus. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam recusandae exercitationem eos hic, nobis a velit, excepturi fugit explicabo repudiandae delectus reiciendis pariatur amet ex suscipit aspernatur ipsum perferendis veritatis? <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dignissimos culpa excepturi aspernatur libero numquam minus necessitatibus laboriosam, explicabo, rerum tenetur accusamus, a ab voluptatum. Vero aliquid quia provident dolorem.
+	<br>
+	<a href="img/jscript.png" target="_blank">Sigue leyendo</a>
+	</p>
+
+	<time>14:00</time>
+
+	<section><!--Division en la pagina-->
+		<h2>PHP</h2>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis recusandae aperiam est repellendus assumenda esse iste fugit commodi ut amet adipisci minus, reiciendis, sequi ad corporis harum tempore quidem architecto!
+		<a href="https://es.wikipedia.org/wiki/PHP" target="_blank">Saber mas</a>
+		</p>
+	</section>
+
+	<article><!--Independiente de la pagina-->
+		<h2>Aprende mas</h2>
+		<p><cite>Lorem ipsum</cite> dolor sit amet consectetur adipisicing elit. Ut possimus magnam tempora quod laboriosam, aut aliquid quos totam corrupti, temporibus facere sit molestiae fuga a ratione consectetur! Corporis, nostrum atque.</p>
+	</article>
+
+	<ul><!--Lista sin orden-->
+		<li>PHP</li>
+		<li>JAVA</li>
+		<li>PYTHON</li>
+	</ul>
+
+	<ol><!--Lista orden numerico-->
+		<li>PHP</li>
+		<li>JAVA</li>
+		<li>PYTHON</li>
+	</ol>
+
+	<table>
+		<thead>
+			<tr>
+				<th>APELLIDO</th>
+				<th>NOMBRE</th>
+				<th>TELEFONO</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>Paquito</td>
+				<td>Perez</td>
+				<td>999666777</td>
+			</tr>
+			<tr>
+				<td>Carlos</td>
+				<td>Ramirez</td>
+				<td>987654321</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<!--Formulario-->
+	<form action="procesar.php">
+		<div>
+			<label for="apellido">APELLIDO</label>
+			<input type="text" name="apellido" placeholder="Primer apellido" id="apellido">
+		</div>
+		<br>
+		<div>			
+			<label for="nombre">NOMBRE</label>
+			<input type="text" name="nombre" placeholder="Ingresa tu nombre" id="nombre">
+		</div>
+		<br>
+		<div>			
+			<label for="telefono">TELEFONO</label>
+			<input type="number" name="telefono" placeholder="Ingresa tu telefono" maxlength="9" id="telefono">
+		</div>
+		<br>
+		<div>
+			<label for="clave">CONTRASEÑA</label>
+			<input type="password" name="clave" placeholder="Ingresa tu contraseña" id="clave">
+		</div>
+		<br>
+		<div>
+			<label for="genero">GENERO</label>
+			<input type="radio">M
+			<input type="radio">F
+		</div>
+		<div>
+			<label for="mensaje">MENSAJE</label>
+			<textarea name="mensaje" id="mensaje" cols="40" rows="5" placeholder="Escribenos un mensaje"></textarea>
+		</div>
+		<div>
+			<label for="edad">EDAD</label>
+			<input type="text" name="edad" maxlength="3" id="edad">
+		</div>
+		<br>
+		<div>
+			<label for="fecha">FECHA DE NACIMIENTO</label>
+			<input type="date">
+		</div>
+		<br>
+		<!--Opciones-->
+		<div>
+			<label for="">Selecciona un lenguaje de programacion</label>
+			<select name="opciones" id="">
+				<option value="PHP">PHP</option>
+				<option value="JAVA">JAVA</option>
+				<option value="PYTHON">PYTHON</option>
+			</select>
+		</div>
+		<br>
+		<div>
+			<input type="submit" value="Enviar datos">
+			<br>
+			<input type="color">
+		</div>
+
+	</form>
+	
+	<footer>Pagina creada por Arenas 2023</footer>
+</body>
+</html>
