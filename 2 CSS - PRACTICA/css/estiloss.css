@@ -1,0 +1,153 @@
+/*Selectores
+* {
+    margin: 0;
+    padding: 0;
+    color: blue;
+}
+
+h1, h2, h3 {
+    color: blue; -> color de letra
+}
+
+h1 {
+    font-size: 30px;->tamaño de letra
+}
+
+p a { ->busca un elemento dentro de otro para cambiarle el estilo 
+    color: red;
+    font-size: 50px;
+}
+
+.enlace {->llama a la clase de un elemento con el mismo nombre class =""
+    color: green;
+    font-size: 50px;
+}
+
+p .enlace {->llama a la clase de un elemento con el mismo nombre class =""
+    color: green;
+    font-size: 50px;
+}
+
+#enlace {->llamar al id de un elemento
+    color: green;
+    font-size: 50px;
+}
+
+h1 {
+    color: red; -> agrega color
+    color: rgb(50, 130, 40); -> agrega un color
+    color: #31A3EF; ->agrega un color
+    color: rgba(50, 130, 40, .5); -> agrega un color y opacidad
+}
+
+div {
+    height: 100px; ->alto
+    width: 300px; ->ancho
+    margin: 20px 50px; ->margen
+    padding: 30px; -> relleno
+    background: #31A3EF; ->color de fondo 
+}
+
+FONDO DE LA PAGINA IMAGEN
+body{
+    background: url(aqui se ingresa la ubicacion de la imagen);->fondo con imagen
+    background-repeat: no-repeat;->sirve para que el fondo no se repita
+    background-attachment: fixed; o scroll;->sirve para que la imagen se quede pegada mientras bajas el contenido
+    background-position: 0%;->sirve para posicionar la imagen de fondo en la pagina
+}
+
+ESTILOS PARA LAS LETRAS
+font-family: Arial; ->fuente de la letra
+font-size:20px; ->tamañano de letra
+font-weight: blod;->letra en negrita
+text-align: center;->el texto se centra
+line-height: 30px;->alturade lineas
+text-decoration: ;->agrega o quita decoracion a los textos
+text-transform: uppercase;->transforma el texto en mayuscula, minuscula o primero mayuscula y despues minuscula
+
+ESTILOS PARA LOS ENLACES
+a:hover { ->sirve cuando se pasa el mouse por encima
+    text-decoration: underline;
+    background: #000
+    color: #FFF;
+}
+a:active->sirve cuando se hace clic
+
+ESTILOS PARA LAS IMAGENES
+width: ; ->ancho
+height: ; ->alto
+border-radius: ;->darle un borde a una imagen se usa para imagenes de usuario
+box-shadow:-> sirve para dar un sombreado con el color que le pongas
+
+ESTILOS PARA LISTAS
+list-style-type: ;->cambia el estilo de la lista
+
+ESTILOS PARA TABLAS
+border -> añadir un borde
+border-collapse -> fusiona los bordes
+
+VARIABLES EN CSS
+Esto ayuda a ahorrar tiempo al diseño nuestra pagina web
+:root{
+    --nombre-variable: #ccc;->declaras la varible y su accion
+}
+Ahora puede reutilizar esta variable en donde lo necesites y si cambias la variable se cambiara todo lo que tenga el nombre de la variable
+var(--nombre-variable)->asi llamas a la variable
+*/
+
+*{   
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial;
+}
+
+h1{
+    text-align: center;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.formulario {
+    width: 21%;  
+    border: 1px solid #ccc;
+    padding: 25px;
+}
+
+.formulario label {
+    display: block;
+}
+
+.formulario textarea{
+    resize: vertical;/*sirve para que no se estire de manera horizontal*/
+    max-height: 200px;/*sirve para que la casilla no se estire tan abajo*/
+    min-height: 100;/*sirve para que la casilla no se estire tan abajo*/
+}
+
+.formulario input, textarea{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;/*ayuda para que los elementos mantegan su tamaño*/
+    border: 1px solid #ccc;
+}
+
+.formulario input[type="submit"]{/*nos ayuda a especificar*/
+    margin-bottom: 0;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+.formulario input[type="submit"]:hover{
+    background: #696969;
+    cursor: pointer;/*cambia el mouse cuando se pasa por encima del boton*/
+}
