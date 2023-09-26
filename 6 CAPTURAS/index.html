@@ -1,329 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Se agrega el icono-->
-    <link rel="icon" href="img/logo_uni_2016.png" type="image/png" />
-    <title>UNI | EARPFIM</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <!--Pagina que nos ofrece los iconos-->
-    <script
-      src="https://kit.fontawesome.com/bfd6a08167.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!--Header-->
-    <header id="header">
-      <i class="fa-solid fa-bars menu-icon" id="boton-abrir"></i>
-      <span>Arenas Banda Brandon Stwuar</span>
-    </header>
-    <div class="contenedor">
-      <!--Menu lateral-->
-      <div class="menu-lateral" id="menu">
-        <ul>
-          <li>
-            <div class="link" id="btn">
-              <i class="fa-solid fa-briefcase icon"></i>
-              <span>General</span>
-              <i class="fa-solid fa-chevron-down desplegar-icon"></i>
-            </div>
-            <div class="sub-menu" id="sub-menu">
-              <ul>
-                <li>
-                  <i class="fa-solid fa-pen-to-square sub-icon"></i>
-                  <a href="#" id="linkHorario">Mi Horario de Clases</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-address-book sub-icon"></i>
-                  <a href="#" id="linkDocente">Informacion Docente</a>
-                </li>
-                <li>
-                  <i class="fa-solid fa-book sub-icon"></i>
-                  <a href="#" id="linkAsistencia">Asistencia</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Se agrega el icono-->
+  <link rel="icon" href="img/logo_uni_2016.png" type="image/png" />
+  <title>UNI | EARPFIM</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <!--Pagina que nos ofrece los iconos-->
+  <script src="https://kit.fontawesome.com/bfd6a08167.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--Header-->
+  <header id="header">
+    <i class="fa-solid fa-bars menu-icon" id="boton-abrir"></i>
+    <span>Arenas Banda Brandon Stwuar</span>
+  </header>
+  <div class="contenedor">
+    <!--Menu lateral-->
+    <div class="menu-lateral" id="menu">
+      <ul>
+        <li>
+          <div class="link" id="btn">
+            <i class="fa-solid fa-briefcase icon"></i>
+            <span>General</span>
+            <i class="fa-solid fa-chevron-down desplegar-icon"></i>
+          </div>
+          <div class="sub-menu" id="sub-menu">
+            <ul>
+              <li>
+                <i class="fa-solid fa-pen-to-square sub-icon"></i>
+                <a href="#" id="linkHorario">Mi Horario de Clases</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-address-book sub-icon"></i>
+                <a href="#" id="linkDocente">Informacion Docente</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-book sub-icon"></i>
+                <a href="#" id="linkAsistencia">Asistencia</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!--Contenido de la pagina-->
+    <div class="contenido" id="contenido">
+      <div div class="seccion" id="inicio">
+        <h2>BIENVENIDO AL EARPFIM ZONA USUARIO</h2>
       </div>
 
-      <!--Contenido de la pagina-->
-      <div class="contenido" id="contenido">
-        <div div class="seccion" id="inicio">
-          <h2>BIENVENIDO AL EARPFIM ZONA USUARIO</h2>
-        </div>
-
-        <div id="contenidoHorario" style="display: none">
-          <h1>Horario de clase</h1>
-          <p>
-            <b>Nota: </b>Presione los cuadros de colores para listar alumnos
-          </p>
-          <button type="button" class="btn" id="btn-pdf">
-            <i class="fa-solid fa-file-pdf"></i>
-            Descargar PDF
-          </button>
-          <p id="txt-horaria">CARGA HORARIA: 16HRS</p>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">HORA</th>
-                <th scope="col">LUNES</th>
-                <th scope="col">MARTES</th>
-                <th scope="col">MIERCOLES</th>
-                <th scope="col">JUEVES</th>
-                <th scope="col">VIERNES</th>
-                <th scope="col">SABADO</th>
-                <th scope="col">DOMINGO</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>07-08</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>08-09</td>
-                <td></td>
-                <td
-                  rowspan="2"
-                  style="border: 2px solid #359eeb; background-color: #88e1f5"
-                >
-                  <i class="fa-solid fa-user"></i>
-                  (35) MC510-C/D[virtual](T)
-                </td>
-                <td
-                  rowspan="4"
-                  style="border: 2px solid #359eeb; background-color: #88e1f5"
-                >
-                  <p>
-                    <i class="fa-solid fa-user"></i>
-                    (35) MC510-C/D[virtual](T)
-                  </p>
-                </td>
-                <td></td>
-                <td
-                  style="border: 2px solid #359eeb; background-color: #88e1f5"
-                >
-                  <p>
-                    <i class="fa-solid fa-user"></i>
-                    (35) MC510-C/D[virtual](T)
-                  </p>
-                </td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>09-10</td>
-                <td></td>
-                <td></td>
-                <td
-                  rowspan="2"
-                  style="border: 2px solid #359eeb; background-color: #88e1f5"
-                >
-                  <p>
-                    <i class="fa-solid fa-user"></i>
-                    (35) MC510-C/D[virtual](T)
-                  </p>
-                </td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>10-11</td>
-                <td></td>
-                <td
-                  rowspan="2"
-                  style="border: 2px solid #359eeb; background-color: #88e1f5"
-                >
-                  <p>
-                    <i class="fa-solid fa-user"></i>
-                    (35) MC510-C/D[virtual](T)
-                  </p>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>11-12</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>12-13</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>13-14</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>14-15</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td
-                  rowspan="3"
-                  style="border: 2px solid #359eeb; background-color: #88e1f5"
-                >
-                  <p>
-                    <i class="fa-solid fa-user"></i>
-                    (35) MC510-C/D[virtual](T)
-                  </p>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>15-16</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>16-17</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>17-18</td>
-                <td></td>
-                <td></td>
-                <td
-                  rowspan="3"
-                  style="border: 2px solid #359eeb; background-color: #88e1f5"
-                >
-                  <p>
-                    <i class="fa-solid fa-user"></i>
-                    (35) MC510-C/D[virtual](T)
-                  </p>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>18-19</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>19-20</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>20-21</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>21-22</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="contenidoAsistencia" style="display: none">
-          <div class="contenido-asis">
-            <div id="contenido-uno">
-              <div class="lef-opci">
-                <span>Semestre: </span><br />
-                <select class="custom-select">
-                  <option value="1">20231</option>
-                  <option value="2">20232</option>
-                  <option value="3">20233</option>
-                </select>
-              </div>
-              <p>
-                Presione este boton solo cuando tenga que registrar su entrada y
-                salida de clase <br /><br />
-                Hora: 12:00:00
-                <button type="button" class="btn btn-success">
-                  MARCAR MI ASISTENCIA: ENTRADA / SALIDA
-                </button>
-                Ayuda
-              </p>
-              <div class="posicion-botones">
-                <button type="button" class="btn btn-warning">
-                  TOMAR ASISTENCIA ALUMNOS
-                </button>
-                <button type="button" class="btn btn-primary">
-                  SOLICITAR RECUPERACION / JUSTIFICACION</button
-                ><br />
-              </div>
-              <button type="button" class="btn btn-primary">P: Puntual</button>
-              <button type="button" class="btn btn-primary">
-                P: Tardanza (min)
-              </button>
-              <button type="button" class="btn btn-primary">P: Falta</button>
-              <button type="button" class="btn btn-primary">
-                P: N.N : N.N
-              </button>
-              <button type="button" class="btn btn-primary">Reporte</button>
+      <div id="contenidoHorario" style="display: none">
+        <h1>Horario de clase</h1>
+        <p>
+          <b>Nota: </b>Presione los cuadros de colores para listar alumnos
+        </p>
+        <button type="button" class="btn" id="btn-pdf">
+          <i class="fa-solid fa-file-pdf"></i>
+          Descargar PDF
+        </button>
+        <p id="txt-horaria">CARGA HORARIA: 16HRS</p>
+        <table class="table table-bordered" id="lista-horario">
+          <thead>
+            <tr>
+              <th scope="col">HORA</th>
+              <th scope="col">LUNES</th>
+              <th scope="col">MARTES</th>
+              <th scope="col">MIERCOLES</th>
+              <th scope="col">JUEVES</th>
+              <th scope="col">VIERNES</th>
+              <th scope="col">SABADO</th>
+              <th scope="col">DOMINGO</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div id="contenidoAsistencia" style="display: none">
+        <div class="contenido-asis">
+          <div id="contenido-uno">
+            <div class="lef-opci">
+              <span>Semestre: </span><br />
+              <select class="custom-select" id="selectSem">
+                <option>Selecciona una opcion</option>
+                <option value="1">20231</option>
+                <option value="2">20232</option>
+                <option value="3">20233</option>
+              </select>
             </div>
+            <p>
+              Presione este boton solo cuando tenga que registrar su entrada y
+              salida de clase <br /><br />
+              Hora: 12:00:00
+              <button type="button" class="btn btn-success">
+                MARCAR MI ASISTENCIA: ENTRADA / SALIDA
+              </button>
+              Ayuda
+            </p>
+            <div class="posicion-botones">
+              <button type="button" class="btn btn-warning">
+                TOMAR ASISTENCIA ALUMNOS
+              </button>
+              <button type="button" class="btn btn-primary">
+                SOLICITAR RECUPERACION / JUSTIFICACION</button><br />
+            </div>
+            <button type="button" class="btn btn-primary">P: Puntual</button>
+            <button type="button" class="btn btn-primary">
+              P: Tardanza (min)
+            </button>
+            <button type="button" class="btn btn-primary">P: Falta</button>
+            <button type="button" class="btn btn-primary">
+              P: N.N : N.N
+            </button>
+            <button type="button" class="btn btn-primary">Reporte</button>
           </div>
-          <br />
-          <div class="contenedor-meses">
-            <div class="contenido-meses">
+        </div>
+        <br />
+        <div class="contenedor-meses">
+          <div class="contenido-meses">
+            <div id="agostoo" style="display: none">
               <div class="mes" onclick="mostrarOcultar('agosto')">
                 AGOSTO 2023
               </div>
@@ -338,53 +140,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>Fila 1, Columna 1</td>
-                      <td>Fila 1, Columna 2</td>
-                      <td>Fila 1, Columna 3</td>
-                      <td>Fila 1, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 2, Columna 1</td>
-                      <td>Fila 2, Columna 2</td>
-                      <td>Fila 2, Columna 3</td>
-                      <td>Fila 2, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 3, Columna 1</td>
-                      <td>Fila 3, Columna 2</td>
-                      <td>Fila 3, Columna 3</td>
-                      <td>Fila 3, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 4, Columna 1</td>
-                      <td>Fila 4, Columna 2</td>
-                      <td>Fila 4, Columna 3</td>
-                      <td>Fila 4, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 5, Columna 1</td>
-                      <td>Fila 5, Columna 2</td>
-                      <td>Fila 5, Columna 3</td>
-                      <td>Fila 5, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -393,7 +149,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mes" onclick="mostrarOcultar('julio')">
+            </div>
+            <div id="julioo" style="display: none">
+              <div class="mes" onclick="mostrarOcultar('julio')" id="julioo">
                 JULIO 2023
               </div>
               <div class="info" id="julio">
@@ -407,53 +165,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>Fila 1, Columna 1</td>
-                      <td>Fila 1, Columna 2</td>
-                      <td>Fila 1, Columna 3</td>
-                      <td>Fila 1, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 2, Columna 1</td>
-                      <td>Fila 2, Columna 2</td>
-                      <td>Fila 2, Columna 3</td>
-                      <td>Fila 2, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 3, Columna 1</td>
-                      <td>Fila 3, Columna 2</td>
-                      <td>Fila 3, Columna 3</td>
-                      <td>Fila 3, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 4, Columna 1</td>
-                      <td>Fila 4, Columna 2</td>
-                      <td>Fila 4, Columna 3</td>
-                      <td>Fila 4, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 5, Columna 1</td>
-                      <td>Fila 5, Columna 2</td>
-                      <td>Fila 5, Columna 3</td>
-                      <td>Fila 5, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -462,7 +174,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mes" onclick="mostrarOcultar('junio')">
+            </div>
+            <div id="junioo" style="display: none">
+              <div class="mes" onclick="mostrarOcultar('junio')" id="junioo">
                 JUNIO 2023
               </div>
               <div class="info" id="junio">
@@ -476,53 +190,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>Fila 1, Columna 1</td>
-                      <td>Fila 1, Columna 2</td>
-                      <td>Fila 1, Columna 3</td>
-                      <td>Fila 1, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 2, Columna 1</td>
-                      <td>Fila 2, Columna 2</td>
-                      <td>Fila 2, Columna 3</td>
-                      <td>Fila 2, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 3, Columna 1</td>
-                      <td>Fila 3, Columna 2</td>
-                      <td>Fila 3, Columna 3</td>
-                      <td>Fila 3, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 4, Columna 1</td>
-                      <td>Fila 4, Columna 2</td>
-                      <td>Fila 4, Columna 3</td>
-                      <td>Fila 4, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 5, Columna 1</td>
-                      <td>Fila 5, Columna 2</td>
-                      <td>Fila 5, Columna 3</td>
-                      <td>Fila 5, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -531,7 +199,11 @@
                   </p>
                 </div>
               </div>
-              <div class="mes" onclick="mostrarOcultar('mayo')">MAYO 2023</div>
+            </div>
+            <div id="mayoo" style="display: none">
+              <div class="mes" onclick="mostrarOcultar('mayo')" id="mayoo">
+                MAYO 2023
+              </div>
               <div class="info" id="mayo">
                 <table class="table table-bordered cont-tabla">
                   <thead>
@@ -543,53 +215,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>Fila 1, Columna 1</td>
-                      <td>Fila 1, Columna 2</td>
-                      <td>Fila 1, Columna 3</td>
-                      <td>Fila 1, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 2, Columna 1</td>
-                      <td>Fila 2, Columna 2</td>
-                      <td>Fila 2, Columna 3</td>
-                      <td>Fila 2, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 3, Columna 1</td>
-                      <td>Fila 3, Columna 2</td>
-                      <td>Fila 3, Columna 3</td>
-                      <td>Fila 3, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 4, Columna 1</td>
-                      <td>Fila 4, Columna 2</td>
-                      <td>Fila 4, Columna 3</td>
-                      <td>Fila 4, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 5, Columna 1</td>
-                      <td>Fila 5, Columna 2</td>
-                      <td>Fila 5, Columna 3</td>
-                      <td>Fila 5, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -598,7 +224,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mes" onclick="mostrarOcultar('abril')">
+            </div>
+            <div id="abrill" style="display: none">
+              <div class="mes" onclick="mostrarOcultar('abril')" id="abrill">
                 ABRIL 2023
               </div>
               <div class="info" id="abril">
@@ -612,53 +240,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>Fila 1, Columna 1</td>
-                      <td>Fila 1, Columna 2</td>
-                      <td>Fila 1, Columna 3</td>
-                      <td>Fila 1, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 2, Columna 1</td>
-                      <td>Fila 2, Columna 2</td>
-                      <td>Fila 2, Columna 3</td>
-                      <td>Fila 2, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 3, Columna 1</td>
-                      <td>Fila 3, Columna 2</td>
-                      <td>Fila 3, Columna 3</td>
-                      <td>Fila 3, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 4, Columna 1</td>
-                      <td>Fila 4, Columna 2</td>
-                      <td>Fila 4, Columna 3</td>
-                      <td>Fila 4, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 5, Columna 1</td>
-                      <td>Fila 5, Columna 2</td>
-                      <td>Fila 5, Columna 3</td>
-                      <td>Fila 5, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -667,7 +249,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mes" onclick="mostrarOcultar('marzo')">
+            </div>
+            <div id="marzoo" style="display: none">
+              <div class="mes" onclick="mostrarOcultar('marzo')" id="marzoo">
                 MARZO 2023
               </div>
               <div class="info" id="marzo">
@@ -681,53 +265,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>Fila 1, Columna 1</td>
-                      <td>Fila 1, Columna 2</td>
-                      <td>Fila 1, Columna 3</td>
-                      <td>Fila 1, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 2, Columna 1</td>
-                      <td>Fila 2, Columna 2</td>
-                      <td>Fila 2, Columna 3</td>
-                      <td>Fila 2, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 3, Columna 1</td>
-                      <td>Fila 3, Columna 2</td>
-                      <td>Fila 3, Columna 3</td>
-                      <td>Fila 3, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 4, Columna 1</td>
-                      <td>Fila 4, Columna 2</td>
-                      <td>Fila 4, Columna 3</td>
-                      <td>Fila 4, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 5, Columna 1</td>
-                      <td>Fila 5, Columna 2</td>
-                      <td>Fila 5, Columna 3</td>
-                      <td>Fila 5, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -736,7 +274,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mes" onclick="mostrarOcultar('febrero')">
+            </div>
+            <div id="febreroo" style="display: none">
+              <div class="mes" onclick="mostrarOcultar('febrero')" id="febreroo">
                 FEBRERO 2023
               </div>
               <div class="info" id="febrero">
@@ -750,53 +290,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>Fila 1, Columna 1</td>
-                      <td>Fila 1, Columna 2</td>
-                      <td>Fila 1, Columna 3</td>
-                      <td>Fila 1, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 2, Columna 1</td>
-                      <td>Fila 2, Columna 2</td>
-                      <td>Fila 2, Columna 3</td>
-                      <td>Fila 2, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 3, Columna 1</td>
-                      <td>Fila 3, Columna 2</td>
-                      <td>Fila 3, Columna 3</td>
-                      <td>Fila 3, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 4, Columna 1</td>
-                      <td>Fila 4, Columna 2</td>
-                      <td>Fila 4, Columna 3</td>
-                      <td>Fila 4, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 5, Columna 1</td>
-                      <td>Fila 5, Columna 2</td>
-                      <td>Fila 5, Columna 3</td>
-                      <td>Fila 5, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -805,7 +299,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mes" onclick="mostrarOcultar('enero')">
+            </div>
+            <div id="eneroo" style="display: none">
+              <div class="mes" onclick="mostrarOcultar('enero')" id="eneroo">
                 ENERO 2023
               </div>
               <div class="info" id="enero">
@@ -819,53 +315,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>Fila 1, Columna 1</td>
-                      <td>Fila 1, Columna 2</td>
-                      <td>Fila 1, Columna 3</td>
-                      <td>Fila 1, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 2, Columna 1</td>
-                      <td>Fila 2, Columna 2</td>
-                      <td>Fila 2, Columna 3</td>
-                      <td>Fila 2, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 3, Columna 1</td>
-                      <td>Fila 3, Columna 2</td>
-                      <td>Fila 3, Columna 3</td>
-                      <td>Fila 3, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 4, Columna 1</td>
-                      <td>Fila 4, Columna 2</td>
-                      <td>Fila 4, Columna 3</td>
-                      <td>Fila 4, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Fila 5, Columna 1</td>
-                      <td>Fila 5, Columna 2</td>
-                      <td>Fila 5, Columna 3</td>
-                      <td>Fila 5, Columna 4</td>
-                      <td>
-                        <button type="button" class="btn btn-success">P</button>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tbody></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -877,18 +327,515 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div id="contenidoDocente" style="display: none">
-          <h1>Hola</h1>
+      <div id="contenidoDocente" style="display: none">
+        <!--Uso de CSS Grid-->
+        <div class="parent">
+          <div class="divUsuario">
+            <img src="img/img-usuario.jpg" alt="Imagen Usuario" id="img-usua" />
+          </div>
+          <div class="divDatos">
+            <p>
+              OBREGON RAMOS, MAXIMO <br />
+              08161078 <br />
+            </p>
+            <p>
+              Actualizar <br />
+              <i class="fa-solid fa-cloud-arrow-up icon-cloud"></i>
+            </p>
+            <p>
+              Historial <br />
+              <i class="fa-solid fa-file icon-file"></i>
+            </p>
+          </div>
+          <div class="divOpcion">
+            <i class="fa-solid fa-arrow-rotate-right btn-carga"></i>
+            <a href="#" class="btn-cargapdf">Cargar PDF</a>
+          </div>
+        </div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="1er-tab" data-bs-toggle="tab" data-bs-target="#1er" type="button"
+              role="tab" aria-controls="1er" aria-selected="true">
+              1er
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="2do-tab" data-bs-toggle="tab" data-bs-target="#2do" type="button" role="tab"
+              aria-controls="2do" aria-selected="false">
+              2do
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="1er" role="tabpanel" aria-labelledby="1er-tab">
+            <h3>1.- DATOS PERSONALES</h3>
+            <div class="parent2">
+              <div class="div1">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="selectSexo">Sexo</label>
+                    <select class="form-select" id="selectSexo">
+                      <option selected>Selecciona el sexo</option>
+                      <option value="m">Masculino</option>
+                      <option value="f">Femenino</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="fechNaci">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechNaci" />
+                  </div>
+                </div>
+                <label for="telfijo">Telefono Fijo</label>
+                <input type="text" class="form-control" id="telfijo" />
+                <label for="ruc">RUC</label>
+                <input type="text" class="form-control" id="ruc" />
+                <label for="brevcate">Brevete y categoria</label>
+                <input type="text" class="form-control" id="brevcate" />
+                <label for="selectcivil">Estado Civil</label>
+                <select class="form-select" id="selectcivil">
+                  <option selected>Selecciona el estado civil</option>
+                  <option value="s">Soltero</option>
+                  <option value="c">Casado</option>
+                </select>
+                <label for="fechMatri">Fecha de Matrimonio</label>
+                <input type="date" class="form-control" id="fechMatri" />
+                <label for="emaill">E-mail (S)</label>
+                <input type="email" class="form-control" id="emaill" />
+                <input type="email" class="form-control" id="emaill" />
+              </div>
+              <div class="div2">
+                <label for="dni">DNI</label>
+                <input type="text" class="form-control" id="dni" />
+                <label for="cel">Celular</label>
+                <input type="text" class="form-control" id="cel" />
+                <label for="libmili">Lib Militar</label>
+                <input type="text" class="form-control" id="libmili" />
+                <label for="vehi">Si cuenta con vehiculo, indicar modelo, placa, año,
+                  color</label>
+                <input type="text" class="form-control" id="vehi" />
+                <label for="grupSan">Grupo Sanguineo</label>
+                <input type="text" class="form-control" id="grupSan" />
+              </div>
+              <div class="div3">
+                <h4>Lugar de Nacimiento</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="selectPais">Pais</label>
+                    <select class="form-select" id="selectPais">
+                      <option value="p">Peru</option>
+                      <option value="o">Otros</option>
+                    </select>
+                    <label for="selectProvin">Provincia</label>
+                    <select class="form-select" id="selectProvin">
+                      <option value="l">Lima</option>
+                      <option value="o">Otros</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="selectDepar">Departamento</label>
+                    <select class="form-select" id="selectDepar">
+                      <option value="l">Lima</option>
+                      <option value="o">Otros</option>
+                    </select>
+                    <label for="selectDis">Distrito</label>
+                    <select class="form-select" id="selectDis">
+                      <option value="s">San Martin de Porres</option>
+                      <option value="o">Otros</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="div4">
+                <h4>Domicilio</h4>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
+                  Abrir Modal
+                </button>
+                <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="miModalLabel">
+                          Agregar Domicilio
+                        </h5>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label for="selectPaisModal">Pais</label>
+                            <select class="form-select" id="selectPaisModal">
+                              <option selected>Selecciona un Pais</option>
+                              <option value="p">Peru</option>
+                              <option value="o">Otros</option>
+                            </select>
+                            <label for="selectProvinModal">Provincia</label>
+                            <select class="form-select" id="selectProvinModal">
+                              <option selected>
+                                Selecciona un Provincia
+                              </option>
+                              <option value="aj">Aja</option>
+                              <option value="o">Otros</option>
+                            </select>
+                            <label for="selectViaModal">Tipo de Via</label>
+                            <select class="form-select" id="selectViaModal">
+                              <option selected>Seleccionar</option>
+                              <option value="">...</option>
+                              <option value="">...</option>
+                            </select>
+                            <label for="selectInmueModal">Tipo</label>
+                            <select class="form-select" id="selectInmueModal">
+                              <option selected>Seleccionar</option>
+                              <option value="">...</option>
+                              <option value="">...</option>
+                            </select>
+                            <label for="selectZonaModal">Tipo de Zona</label>
+                            <select class="form-select" id="selectZonaModal">
+                              <option selected>Seleccionar</option>
+                              <option value="">...</option>
+                              <option value="">...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="selectDeparModal">Departamento</label>
+                            <select class="form-select" id="selectDeparModal">
+                              <option selected>
+                                Selecciona un Departamento
+                              </option>
+                              <option value="a">Ancash</option>
+                              <option value="o">Otros</option>
+                            </select>
+                            <label for="selectDisModal">Distrito</label>
+                            <select class="form-select" id="selectDisModal">
+                              <option selected>Selecciona un Distrito</option>
+                              <option value="c">Coris</option>
+                              <option value="o">Otros</option>
+                            </select>
+                            <label for="NomVia">Nombre de Via</label>
+                            <input type="text" class="form-control" id="NomVia" />
+                            <label for="NumInmue">Numero de Inmueble</label>
+                            <input type="text" class="form-control" id="NumInmue" />
+                            <label for="NumZona">Numero de la Zona</label>
+                            <input type="text" class="form-control" id="NumZona" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <table class="table table-bordered" id="tbDomicilio">
+                  <thead>
+                    <tr>
+                      <th scope="col">Orden</th>
+                      <th scope="col">País</th>
+                      <th scope="col">Direccion extranjera</th>
+                      <th scope="col">Departamento</th>
+                      <th scope="col">Provincia</th>
+                      <th scope="col">Distrito</th>
+                      <th scope="col">Tipo de vía</th>
+                      <th scope="col">Nombre de la vía</th>
+                      <th scope="col">Tipo</th>
+                      <th scope="col">Número de inmueble</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="div5">
+                <h4>1.1 .- PERSONAS A COMUNICAR EN CASO DE EMERGENCIA:</h4>
+                <div class="row">
+                  <div class="col-md-4">
+                    <label>Contacto 1 (*)</label><br>
+                    <label for="apellidosNombres1">Apellidos y Nombres</label>
+                    <input type="text" class="form-control" id="apellidosNombres1">
+
+                    <label>Contacto 2 (*)</label><br>
+                    <label for="apellidosNombres2">Apellidos y Nombres</label>
+                    <input type="text" class="form-control" id="apellidosNombres2">
+
+                    <label>Contacto 3 (*)</label><br>
+                    <label for="apellidosNombres3">Apellidos y Nombres</label>
+                    <input type="text" class="form-control" id="apellidosNombres3">
+                  </div>
+
+                  <div class="col-md-4">
+                    <br>
+                    <label for="parentesco1">Parentesco</label>
+                    <input type="text" class="form-control" id="parentesco1">
+                    <br>
+                    <label for="parentesco2">Parentesco</label>
+                    <input type="text" class="form-control" id="parentesco2">
+                    <br>
+                    <label for="parentesco3">Parentesco</label>
+                    <input type="text" class="form-control" id="parentesco3">
+                  </div>
+
+                  <div class="col-md-4">
+                    <br>
+                    <label for="celular1">Celular</label>
+                    <input type="text" class="form-control" id="celular1">
+                    <br>
+                    <label for="celular2">Celular</label>
+                    <input type="text" class="form-control" id="celular2">
+                    <br>
+                    <label for="celular3">Celular</label>
+                    <input type="text" class="form-control" id="celular3">
+                  </div>
+                </div>
+                <br>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                  data-bs-target="#modalAgregarFamiliar">
+                  Agregar Familiar
+                </button>
+                <br>
+                <div class="modal fade" id="modalAgregarFamiliar" tabindex="-1"
+                  aria-labelledby="modalAgregarFamiliarLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="modalAgregarFamiliarLabel">Agregar Familiar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col">
+                              <div class="mb-3">
+                                <label for="apellidosNombres" class="form-label">Apellidos y Nombres</label>
+                                <input type="text" class="form-control" id="apellidosNombres">
+                              </div>
+                              <div class="mb-3">
+                                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control" id="fechaNacimiento">
+                              </div>
+                              <div class="mb-3">
+                                <label for="nivelEstudios" class="form-label">Nivel de Estudios</label>
+                                <select class="form-select" id="nivelEstudios">
+                                  <option selected>Seleccion una opcion</option>
+                                  <option value="universidad">Universidad</option>
+                                </select>
+                              </div>
+                              <div class="mb-3 form-check">
+                                <label class="form-check-label" for="dependeEconomicamente">¿Depende económicamente de
+                                  ti?</label>
+                                <div>
+                                  <input type="radio" class="form-check-input" id="dependeEconomicamenteSi"
+                                    name="dependeEconomicamente" value="si">
+                                  <label class="form-check-label" for="dependeEconomicamenteSi">Sí</label>
+                                </div>
+                                <div>
+                                  <input type="radio" class="form-check-input" id="dependeEconomicamenteNo"
+                                    name="dependeEconomicamente" value="no">
+                                  <label class="form-check-label" for="dependeEconomicamenteNo">No</label>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="col">
+                              <div class="mb-3">
+                                <label for="parentesco" class="form-label">Parentesco</label>
+                                <select class="form-select" id="parentesco">
+                                  <option selected>Selecciona una opcion</option>
+                                  <option value="padre">Padre</option>
+                                  <option value="madre">Madre</option>
+                                  <option value="hijo">Hijo</option>
+                                </select>
+                              </div>
+                              <div class="mb-3">
+                                <label for="estadoCivil" class="form-label">Estado Civil</label>
+                                <select class="form-select" id="estadoCivil">
+                                  <option value="soltero">Soltero</option>
+                                  <option value="casado">Casado</option>
+                                  <option value="divorciado">Divorciado</option>
+                                </select>
+                              </div>
+                              <div class="mb-3">
+                                <label for="ocupacion" class="form-label">Ocupación</label>
+                                <input type="text" class="form-control" id="ocupacion">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <h4>2.-DATOS LABORALES</h4>
+                <div class="row">
+                  <div class="col-md-3">
+                    <label for="condicion">Condicion (C/N)</label>
+                    <select class="form-select" id="condicion">
+                      <option selected>Selecciona una de las opciones</option>
+                      <option value="C">C</option>
+                      <option value="N">N</option>
+                    </select>
+
+                    <label for="horasLectivas">Horas lectivas</label>
+                    <input type="text" class="form-control" id="horasLectivas">
+
+                    <label for="fechaIngreso">Fecha ingreso FIM</label>
+                    <input type="date" class="form-control" id="fechaIngreso">
+
+                    <label for="afpNombre">AFP (Nombre)</label>
+                    <input type="text" class="form-control" id="afpNombre">
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-select" id="categoria">
+                      <option selected>Selecciona una de las opciones</option>
+                      <option value="categoria1">Categoría 1</option>
+                      <option value="categoria2">Categoría 2</option>
+                    </select>
+
+                    <label for="dependencia">Dependencia donde labora (Actual)</label>
+                    <input type="text" class="form-control" id="dependencia">
+
+                    <label for="fechaNacimiento">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento">
+
+                    <label for="codAfp">Cod. AFP</label>
+                    <input type="text" class="form-control" id="codAfp">
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="dedicacion">Dedicacion</label>
+                    <select class="form-select" id="dedicacion">
+                      <option selected>Selecciona una de las opciones</option>
+                      <option value="dedicacion1">Dedicación 1</option>
+                      <option value="dedicacion2">Dedicación 2</option>
+                    </select>
+
+                    <label for="regimenPensionario">Regimen pensionario</label>
+                    <select class="form-select" id="regimenPensionario">
+                      <option selected>Selecciona una de las opciones</option>
+                      <option value="regimen1">Régimen 1</option>
+                      <option value="regimen2">Régimen 2</option>
+                    </select>
+
+                    <label for="codEsSalud">Cod. EsSalud</label>
+                    <input type="text" class="form-control" id="codEsSalud">
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="horas">Horas</label>
+                    <input type="text" class="form-control" id="horas">
+
+                    <label for="otroSeguro">Otro tipo de seguro</label>
+                    <input type="text" class="form-control" id="otroSeguro">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="2do" role="tabpanel" aria-labelledby="2do-tab">
+            <br>
+            <h3>
+              3.-DATOS DE FORMACION PROFESIONAL: Indicar Grados y Titulos
+              obtenidos, señalando fecha de revalidacion, para el caso de
+              titulos y grados otogorgados en el extranjero
+            </h3>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal2">
+              Agregar Formación Profesional
+            </button>
+            <div class="modal fade" id="miModal2" tabindex="-1" aria-labelledby="miModalLabel2" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="miModalLabel2">
+                      Agregar Formación Profesional
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="formProfesional">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="formacionProf">Formación Profesional</label>
+                          <select class="form-select" id="formacionProf">
+                            <option selected>Seleccionar</option>
+                            <option value="tp">Titulo profesional</option>
+                            <option value="maes">Maestria</option>
+                          </select>
+                          <label for="universidad">Universidad</label>
+                          <input type="text" class="form-control" id="universidad" />
+                          <label for="fechaInicio">Fecha de Inicio</label>
+                          <input type="date" class="form-control" id="fechaInicio" />
+                          <label for="gradoObtenido">Grado Obtenido</label>
+                          <input type="text" class="form-control" id="gradoObtenido" />
+                        </div>
+                        <div class="col-md-6">
+                          <label for="pais">Pais</label>
+                          <select class="form-select" id="pais">
+                            <option selected>Seleccionar</option>
+                            <option value="peru">Perú</option>
+                            <option value="otros">Otros</option>
+                          </select>
+                          <label for="especialidad">Especialidad</label>
+                          <input type="text" class="form-control" id="especialidad" />
+                          <label for="fechaFinal">Fecha Final</label>
+                          <input type="date" class="form-control" id="fechaFinal" />
+                          <label for="documentoSustentatorio">Documento Sustentatorio</label>
+                          <input type="file" class="form-control" id="documentoSustentatorio" />
+                        </div>
+                      </div>
+                      <label for="observacion">Observación</label>
+                      <textarea class="form-control" id="observacion" rows="3">...</textarea>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary" id="btnGuardar">
+                      Guardar
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                      Cancelar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br></br>
+            <table class="table table-bordered" id="tbDatosprofe">
+              <thead>
+                <tr>
+                  <th scope="col">Orden</th>
+                  <th scope="col">Formación Profesional</th>
+                  <th scope="col">País</th>
+                  <th scope="col">Universidad</th>
+                  <th scope="col">Especialidad</th>
+                  <th scope="col">Fecha de Inicio</th>
+                  <th scope="col">Fecha Final</th>
+                  <th scope="col">Grado Obtenido</th>
+                  <th scope="col">Documento sustentatorio</th>
+                  <th scope="col">Observación</th>
+                  <th scope="col">Opciones</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
 
-    <script src="js/script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>

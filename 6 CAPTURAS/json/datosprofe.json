@@ -1,0 +1,42 @@
+[
+    {
+        "orden" : "1",
+        "formprofesional" : "Título Profesional",
+        "pais" : "Perú",
+        "universidad" : "UNIVERSIDAD NACIONAL DE INGENIERIA",
+        "especialidad" : "Ingeniero en la especialidad de Ingeniería Me",
+        "fechinicio" : "08/08/93",
+        "fechfinal" : "12/12/99",
+        "gradoobte" : "Títulado",
+        "docsustenta" : "",
+        "Observacion" : "",
+        "opciones" : ""
+    },
+
+    {
+        "orden" : "2",
+        "formprofesional" : "Maestría",
+        "pais" : "Perú",
+        "universidad" : "PONTIFICIA UNIVERSIDAD CATOLICA DEL PERU",
+        "especialidad" : "Estudios completos de maestría en Ingeniería",
+        "fechinicio" : "04/04/02",
+        "fechfinal" : "12/12/06",
+        "gradoobte" : "Magíster",
+        "docsustenta" : "",
+        "Observacion" : "",
+        "opciones" : ""
+    },
+    {
+        "orden" : "3",
+        "formprofesional" : "Maestría",
+        "pais" : "Perú",
+        "universidad" : "UNIVERSIDAD ANTONIO RUIZ DE MONTOYA",
+        "especialidad" : "Maestría en educación con mención en docencia",
+        "fechinicio" : "03/03/17",
+        "fechfinal" : "12/12/19",
+        "gradoobte" : "Magíster",
+        "docsustenta" : "",
+        "Observacion" : "",
+        "opciones" : ""
+    }
+]
