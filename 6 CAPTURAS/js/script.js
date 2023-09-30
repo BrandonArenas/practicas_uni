@@ -3,6 +3,7 @@ const botonAbrir = document.getElementById("boton-abrir"); //Botón que abre y c
 const menuLateral = document.getElementById("menu"); //El menú lateral
 const contenedor = document.querySelector(".contenedor"); // Contenedor principal
 const header = document.getElementById("header"); //La cabecera de la página
+const fondoTransparente = document.getElementById("fondo-transparente");
 
 const btnDesplegar = document.getElementById("btn"); //desplegar el submenú
 const subMenu = document.getElementById("sub-menu"); //El submenu
@@ -19,6 +20,14 @@ botonAbrir.addEventListener("click", () => {
   menuLateral.classList.toggle("activo");
   contenedor.classList.toggle("activo");
   header.classList.toggle("activo");
+  fondoTransparente.classList.toggle("activo");
+});
+
+/*Clic fuera del menu lateral*/
+fondoTransparente.addEventListener("click", () => {
+  menuLateral.classList.remove("activo");
+  contenedor.classList.remove("activo");
+  fondoTransparente.classList.remove("activo");
 });
 
 //Evento de escucha al botón "btnDesplegar" mostrar y ocultar el submenú
@@ -200,7 +209,7 @@ function cargarDatosdomicilio() {
 //Llamar a la funcion
 cargarDatosdomicilio()
 
-//Seleccionar la tabla
+/*/Seleccionar la tabla
 const tablaProfe = document.querySelector("#tbDatosprofe tbody");
 
 function cargarDatosprofesional() {
@@ -230,6 +239,86 @@ function cargarDatosprofesional() {
 }
 //Llamar a la funcion
 cargarDatosprofesional()
+*/
+
+const datosProfesionales = [];
+
+function initializePagination() {
+  $('#tbDatosprofe').pagination({
+    dataSource: datosProfesionales,
+    pageSize: 2,
+    showPageNumbers: true,
+    showNavigator: true,
+    formatNavigator: '<span> Página <%= currentPage %> de <%= totalPage %> </span>',
+    callback: function (data, pagination) {
+      var $table = $('#tbDatosprofe').find('tbody');
+      $table.empty();
+      for (var i = 0; i < data.length; i++) {
+        $table.append(
+          '<tr><td>' + data[i].formacionProf +
+          '</td><td>' + data[i].universidad +
+          '</td><td>' + data[i].fechaInicio +
+          '</td><td>' + data[i].gradoObtenido +
+          '</td><td>' + data[i].pais +
+          '</td><td>' + data[i].especialidad +
+          '</td><td>' + data[i].fechaFinal +
+          '</td><td>' + data[i].documentoSustentatorio +
+          '</td><td>' + data[i].observacion + '</td></tr>');
+      }
+    },
+  });
+};
+
+// Función para guardar datos
+function guardarDatos() {
+  const formacionProf = document.getElementById("formacionProf").value;
+  const universidad = document.getElementById("universidad").value;
+  const fechaInicio = document.getElementById("fechaInicio").value;
+  const gradoObtenido = document.getElementById("gradoObtenido").value;
+  const pais = document.getElementById("pais").value;
+  const especialidad = document.getElementById("especialidad").value;
+  const fechaFinal = document.getElementById("fechaFinal").value;
+  const documentoSustentatorio = document.getElementById("documentoSustentatorio").value;
+  const observacion = document.getElementById("observacion").value;
+
+  const formDatospro = document.getElementById("formProfesional");
+  const tablaBody = document.getElementById("tbodyDatosprofe");
+
+  const fila = document.createElement("tr");
+
+  fila.innerHTML = `
+        <td>${formacionProf}</td>
+        <td>${universidad}</td>
+        <td>${fechaInicio}</td>
+        <td>${gradoObtenido}</td>
+        <td>${pais}</td>
+        <td>${especialidad}</td>
+        <td>${fechaFinal}</td>
+        <td>${documentoSustentatorio}</td>
+        <td>${observacion}</td>
+      `;
+
+  const datos = {
+    formacionProf,
+    universidad,
+    fechaInicio,
+    gradoObtenido,
+    pais,
+    especialidad,
+    fechaFinal,
+    documentoSustentatorio,
+    observacion
+  };
+
+  tablaBody.appendChild(fila);
+  datosProfesionales.push(datos);
+
+  initializePagination();
+
+  formDatospro.reset();
+}
+
+initializePagination();
 
 
 
