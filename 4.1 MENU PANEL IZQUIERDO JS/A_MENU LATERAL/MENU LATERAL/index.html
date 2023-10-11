@@ -1,64 +1,98 @@
 <!DOCTYPE html>
-<html>
-  <title>W3.CSS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <body>
-    <div
-      class="w3-sidebar w3-bar-block w3-card w3-animate-left"
-      style="display: none"
-      id="mySidebar"
-    >
-      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">
-        Close &times;
-      </button>
-      <a href="#" class="w3-bar-item w3-button">Link 1</a>
-      <a href="#" class="w3-bar-item w3-button">Link 2</a>
-      <a href="#" class="w3-bar-item w3-button">Link 3</a>
-    </div>
+<html lang="en">
 
-    <div id="main">
-      <div class="w3-teal">
-        <button
-          id="openNav"
-          class="w3-button w3-teal w3-xlarge"
-          onclick="w3_open()"
-        >
-          &#9776;
-        </button>
-        <div class="w3-container">
-          <h1>My Page</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/bfd6a08167.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cabecera {
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            background: #224fb1;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: margin-left 0.3s;
+        }
+
+        .menu-lateral {
+            position: fixed;
+            width: 15%;
+            top: 0;
+            height: 100%;
+            background: #ffffff;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transform: translateX(-100%);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .menu-lateral.activo {
+            transform: translateX(0);
+        }
+
+        .icono-menu {
+            cursor: pointer;
+        }
+
+        .contenido {
+            width: 100%;
+            height: auto;
+            padding-top: 50px;
+            transition: margin-left 0.3s;
+        }
+
+        .cabecera.activo,
+        .contenido.activo {
+            margin-left: 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="cabecera">
+            <button class="icono-menu" onclick="abrirMenu()"><i class="fa-solid fa-bars menu-icon"></i></button>
+            <div class="cabecera-contenido">
+                <span>Mi Pagina</span>
+            </div>
+        </header>
+
+        <div class="menu-lateral">
+            <span>Menu</span>
+            <nav class="navegacion">
+                <a href="">Link 1</a>
+                <a href="">Link 2</a>
+                <a href="">Link 3</a>
+            </nav>
         </div>
-      </div>
 
-      <img src="img_car.jpg" alt="Car" style="width: 100%" />
-
-      <div class="w3-container">
-        <p>In this example, the sidebar is hidden (style="display:none")</p>
-        <p>
-          It is shown when you click on the menu icon in the top left corner.
-        </p>
-        <p>When it is opened, it shifts the page content to the right.</p>
-        <p>
-          We use JavaScript to add a 25% left margin to the div element with
-          id="main" when this happens. The value "25%" matches the width of the
-          sidebar.
-        </p>
-      </div>
+        <main class="contenido">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti molestiae maxime architecto, placeat
+                velit
+                ducimus dicta harum omnis rem magni ipsam? Tempore harum error deserunt officiis aspernatur neque vel
+                quidem?</p>
+        </main>
     </div>
-
     <script>
-      function w3_open() {
-        document.getElementById("main").style.marginLeft = "25%";
-        document.getElementById("mySidebar").style.width = "25%";
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("openNav").style.display = "none";
-      }
-      function w3_close() {
-        document.getElementById("main").style.marginLeft = "0%";
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("openNav").style.display = "inline-block";
-      }
+        function abrirMenu() {
+            const menuLateral = document.querySelector(".menu-lateral");
+            const cabeceraa = document.querySelector(".cabecera");
+            const contenidoPagina = document.querySelector(".contenido");
+
+            menuLateral.classList.toggle("activo");
+            cabeceraa.classList.toggle("activo");
+            contenidoPagina.classList.toggle("activo");
+        }
+
     </script>
-  </body>
+</body>
+
 </html>

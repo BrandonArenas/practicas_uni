@@ -1,0 +1,212 @@
+{
+    "departamentos": [
+        {
+            "id": "01",
+            "nombre": "Áncash"
+        },
+        {
+            "id": "02",
+            "nombre": "Apurímac"
+        },
+        {
+            "id": "03",
+            "nombre": "Arequipa"
+        },
+        {
+            "id": "04",
+            "nombre": "Ayacucho"
+        },
+        {
+            "id": "05",
+            "nombre": "Cajamarca"
+        },
+        {
+            "id": "06",
+            "nombre": "Lima"
+        }
+    ],
+    "provincias": [
+        {
+            "id": "0101",
+            "nombre": "Huaraz",
+            "departamento_id": "01"
+        },
+        {
+            "id": "0102",
+            "nombre": "Carhuaz",
+            "departamento_id": "01"
+        },
+        {
+            "id": "0201",
+            "nombre": "Abancay",
+            "departamento_id": "02"
+        },
+        {
+            "id": "0202",
+            "nombre": "Andahuaylas",
+            "departamento_id": "02"
+        },
+        {
+            "id": "0301",
+            "nombre": "Arequipa",
+            "departamento_id": "03"
+        },
+        {
+            "id": "0302",
+            "nombre": "Caylloma",
+            "departamento_id": "03"
+        },
+        {
+            "id": "0401",
+            "nombre": "Huamanga",
+            "departamento_id": "04"
+        },
+        {
+            "id": "0402",
+            "nombre": "Huanta",
+            "departamento_id": "04"
+        },
+        {
+            "id": "0501",
+            "nombre": "Cajamarca",
+            "departamento_id": "05"
+        },
+        {
+            "id": "0502",
+            "nombre": "Cajabamba",
+            "departamento_id": "05"
+        },
+        {
+            "id": "0601",
+            "nombre": "Lima",
+            "departamento_id": "06"
+        },
+        {
+            "id": "0602",
+            "nombre": "Huaura",
+            "departamento_id": "06"
+        }
+    ],
+    "distritos": [
+        {
+            "id": "010101",
+            "nombre": "Chacas",
+            "provincia_id": "0101"
+        },
+        {
+            "id": "010102",
+            "nombre": "Caraz",
+            "provincia_id": "0101"
+        },
+        {
+            "id": "010201",
+            "nombre": "Yungay",
+            "provincia_id": "0102"
+        },
+        {
+            "id": "010202",
+            "nombre": "Yungay",
+            "provincia_id": "0102"
+        },
+        {
+            "id": "020101",
+            "nombre": "Abancay",
+            "provincia_id": "0201"
+        },
+        {
+            "id": "020102",
+            "nombre": "Circa",
+            "provincia_id": "0201"
+        },
+        {
+            "id": "020201",
+            "nombre": "Andahuaylas",
+            "provincia_id": "0202"
+        },
+        {
+            "id": "020202",
+            "nombre": "Talavera",
+            "provincia_id": "0202"
+        },
+        {
+            "id": "030101",
+            "nombre": "Arequipa",
+            "provincia_id": "0301"
+        },
+        {
+            "id": "030102",
+            "nombre": "Yanahuara",
+            "provincia_id": "0301"
+        },
+        {
+            "id": "030201",
+            "nombre": "Chivay",
+            "provincia_id": "0302"
+        },
+        {
+            "id": "030202",
+            "nombre": "Caylloma",
+            "provincia_id": "0302"
+        },
+        {
+            "id": "040101",
+            "nombre": "Huamanga",
+            "provincia_id": "0401"
+        },
+        {
+            "id": "040102",
+            "nombre": "Ayacucho",
+            "provincia_id": "0401"
+        },
+        {
+            "id": "040201",
+            "nombre": "Andrés Avelino Cáceres",
+            "provincia_id": "0402"
+        },
+        {
+            "id": "040202",
+            "nombre": "Ayacucho",
+            "provincia_id": "0402"
+        },
+        {
+            "id": "050101",
+            "nombre": "Cajamarca",
+            "provincia_id": "0501"
+        },
+        {
+            "id": "050102",
+            "nombre": "Bambamarca",
+            "provincia_id": "0501"
+        },
+        {
+            "id": "050201",
+            "nombre": "Cajabamba",
+            "provincia_id": "0502"
+        },
+        {
+            "id": "050202",
+            "nombre": "Celendín",
+            "provincia_id": "0502"
+        },
+        {
+            "id": "060101",
+            "nombre": "Lima",
+            "provincia_id": "0601"
+        },
+        {
+            "id": "060102",
+            "nombre": "San Isidro",
+            "provincia_id": "0601"
+        },
+        {
+            "id": "060201",
+            "nombre": "Huacho",
+            "provincia_id": "0602"
+        },
+        {
+            "id": "060202",
+            "nombre": "Végueta",
+            "provincia_id": "0602"
+        }
+    ]
+}

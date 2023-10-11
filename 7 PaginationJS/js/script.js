@@ -9,10 +9,11 @@ $(document).ready(function () {
                 //Funcion cambia de pagina
                 var html = '';
                 $.each(data, function (index, item) {
-                    html += '<div>' + item.nombre + '</div>';                 
+                    html += '<div>' + item.nombre + '</div>';
                 });
                 $('#contenedor-datos').html(html);
             }
         });
     })
 })
+

@@ -308,7 +308,7 @@
                 ENERO 2023
               </div>
               <div class="info" id="enero">
-                <table class="table table-bordered cont-tabla">
+                <table class="table table-bordered cont-tabla" id="datosMeses">
                   <thead>
                     <tr>
                       <th scope="col">DÍA</th>
@@ -464,64 +464,85 @@
                         </h5>
                       </div>
                       <div class="modal-body">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <label for="selectPaisModal">Pais</label>
-                            <select class="form-select" id="selectPaisModal">
-                              <option selected>Selecciona un Pais</option>
-                              <option value="p">Peru</option>
-                              <option value="o">Otros</option>
-                            </select>
-                            <label for="selectProvinModal">Provincia</label>
-                            <select class="form-select" id="selectProvinModal">
-                              <option selected>
-                                Selecciona un Provincia
-                              </option>
-                              <option value="aj">Aja</option>
-                              <option value="o">Otros</option>
-                            </select>
-                            <label for="selectViaModal">Tipo de Via</label>
-                            <select class="form-select" id="selectViaModal">
-                              <option selected>Seleccionar</option>
-                              <option value="">...</option>
-                              <option value="">...</option>
-                            </select>
-                            <label for="selectInmueModal">Tipo</label>
-                            <select class="form-select" id="selectInmueModal">
-                              <option selected>Seleccionar</option>
-                              <option value="">...</option>
-                              <option value="">...</option>
-                            </select>
-                            <label for="selectZonaModal">Tipo de Zona</label>
-                            <select class="form-select" id="selectZonaModal">
-                              <option selected>Seleccionar</option>
-                              <option value="">...</option>
-                              <option value="">...</option>
-                            </select>
+                        <form id="formDomicilio">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <label for="selectPaisModal">Pais</label>
+                              <select class="form-select" id="selectPaisModal">
+                                <option selected>...</option>
+                                <option value="p">Peru</option>
+                                <option value="o">Otros</option>
+                              </select>
+                              <div id="proVincia">
+                                <label for="selectProvinModal">Provincia</label>
+                                <select class="form-select" id="selectProvinModal">
+                                  <option selected>
+                                    ...
+                                  </option>
+                                  
+                                </select>
+                              </div>
+                              <div id="tipoVia">
+                                <label for="selectViaModal">Tipo de Via</label>
+                                <select class="form-select" id="selectViaModal">
+                                  <option selected>Seleccionar</option>
+                                  <option value="">...</option>
+                                  <option value="">...</option>
+                                </select>
+                              </div>
+                              <div id="tipoInmue">
+                                <label for="selectInmueModal">Tipo</label>
+                                <select class="form-select" id="selectInmueModal">
+                                  <option selected>Seleccionar</option>
+                                  <option value="">...</option>
+                                  <option value="">...</option>
+                                </select>
+                              </div>
+                              <div id="tipoZona">
+                                <label for="selectZonaModal">Tipo de Zona</label>
+                                <select class="form-select" id="selectZonaModal">
+                                  <option selected>Seleccionar</option>
+                                  <option value="">...</option>
+                                  <option value="">...</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div id="deparTamentoo">
+                                <label for="selectDeparModal">Departamento</label>
+                                <select class="form-select" id="selectDeparModal">
+                                  <option selected>
+                                    ...
+                                  </option>
+                                  
+                                </select>
+                              </div>
+                              <div id="Distritoo">
+                                <label for="selectDisModal">Distrito</label>
+                                <select class="form-select" id="selectDisModal">
+                                  <option selected>...</option>
+                                  
+                                </select>
+                              </div>
+                              <div id="nombreVia">
+                                <label for="NomVia">Nombre de Via</label>
+                                <input type="text" class="form-control" id="NomVia" />
+                              </div>
+                              <div id="numeroInmueble">
+                                <label for="NumInmue">Numero de Inmueble</label>
+                                <input type="text" class="form-control" id="NumInmue" />
+                              </div>
+                              <div id="numeroZona">
+                                <label for="NumZona">Numero de la Zona</label>
+                                <input type="text" class="form-control" id="NumZona" />
+                              </div>
+                              <div class="form-group" id="textareaa">
+                                <label>Agregar inforamcion</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                              </div>
+                            </div>
                           </div>
-                          <div class="col-md-6">
-                            <label for="selectDeparModal">Departamento</label>
-                            <select class="form-select" id="selectDeparModal">
-                              <option selected>
-                                Selecciona un Departamento
-                              </option>
-                              <option value="a">Ancash</option>
-                              <option value="o">Otros</option>
-                            </select>
-                            <label for="selectDisModal">Distrito</label>
-                            <select class="form-select" id="selectDisModal">
-                              <option selected>Selecciona un Distrito</option>
-                              <option value="c">Coris</option>
-                              <option value="o">Otros</option>
-                            </select>
-                            <label for="NomVia">Nombre de Via</label>
-                            <input type="text" class="form-control" id="NomVia" />
-                            <label for="NumInmue">Numero de Inmueble</label>
-                            <input type="text" class="form-control" id="NumInmue" />
-                            <label for="NumZona">Numero de la Zona</label>
-                            <input type="text" class="form-control" id="NumZona" />
-                          </div>
-                        </div>
+                        </form>
                       </div>
                       <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">

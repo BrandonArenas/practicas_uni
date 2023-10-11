@@ -1,37 +1,50 @@
 [
     {
-        "dia": "viernes",
-        "curso": "MC510-E(TEO)",
-        "horario": "11 - 13",
-        "marcacion": "11:00 - 13:00",
-        "estado": "P"
+        "semestre": 20231,
+        "fecha": "2023-01-06",
+        "curso": "MC064",
+        "estado": 1
     },
     {
-        "dia": "viernes",
-        "curso": "MC510-E(TEO)",
-        "horario": "11 - 13",
-        "marcacion": "11:00 - 13:00",
-        "estado": "P"
+        "semestre": 20222,
+        "fecha": "2023-02-12",
+        "curso": "BFIC001",
+        "estado": 2
     },
     {
-        "dia": "viernes",
-        "curso": "MC510-E(TEO)",
-        "horario": "11 - 13",
-        "marcacion": "11:00 - 13:00",
-        "estado": "P"
+        "semestre": 20222,
+        "fecha": "2023-03-02",
+        "curso": "BFIC001",
+        "estado": 3
     },
     {
-        "dia": "viernes",
-        "curso": "MC510-E(TEO)",
-        "horario": "11 - 13",
-        "marcacion": "11:00 - 13:00",
-        "estado": "P"
+        "semestre": 20231,
+        "fecha": "2023-04-28",
+        "curso": "MC064",
+        "estado": 1
     },
     {
-        "dia": "viernes",
-        "curso": "MC510-E(TEO)",
-        "horario": "11 - 13",
-        "marcacion": "11:00 - 13:00",
-        "estado": "P"
+        "semestre": 20222,
+        "fecha": "2023-05-18",
+        "curso": "BFIC001",
+        "estado": 2
+    },
+    {
+        "semestre": 20222,
+        "fecha": "2023-06-05",
+        "curso": "BFIC001",
+        "estado": 3
+    },
+    {
+        "semestre": 20222,
+        "fecha": "2023-07-16",
+        "curso": "BFIC001",
+        "estado": 1
+    },
+    {
+        "semestre": 20222,
+        "fecha": "2023-08-20",
+        "curso": "BFIC001",
+        "estado": 2
     }
 ]

@@ -249,7 +249,7 @@ function initializePagination() {
     pageSize: 2,
     showPageNumbers: true,
     showNavigator: true,
-    formatNavigator: '<span> Página <%= currentPage %> de <%= totalPage %> </span>',
+    formatNavigator: '<br><span> Página <%= currentPage %> de <%= totalPage %> </span>',
     callback: function (data, pagination) {
       var $table = $('#tbDatosprofe').find('tbody');
       $table.empty();
@@ -319,6 +319,153 @@ function guardarDatos() {
 }
 
 initializePagination();
+
+
+/*fetch('json/datostab.json')
+  .then(response => response.json())
+  .then(data => {
+    const tabla = document.getElementById('datosMeses');
+    const tbody = tabla.querySelector('tbody');
+
+    data.forEach(item => {
+      // Obtén la fecha del objeto y extrae el mes
+      const fecha = new Date(item.fecha);
+      const mes = fecha.toLocaleString('default', { month: 'long' });
+
+      // Crea una nueva fila en la tabla con los datos
+      const fila = document.createElement('tr');
+      fila.innerHTML = `
+        <td>${item.semestre}</td>
+        <td>${item.fecha}</td>
+        <td>${item.curso}</td>
+        <td>${item.estado}</td>
+        <td>${mes}</td>
+      `;
+
+      tbody.appendChild(fila);
+    });
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON:', error);
+  });*/
+
+//Domicilio
+fetch('json/domicilio.json')
+  .then(response => response.json())
+  .then(data => {
+    const selectDepar = document.getElementById("selectDeparModal");
+    const departamentos = data.departamentos;
+    departamentos.forEach(depart => {
+      const op = document.createElement("option");
+      op.value = depart.id;
+      op.textContent = depart.nombre;
+      selectDepar.appendChild(op);
+    });
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON:', error);
+  });
+
+fetch('json/domicilio.json')
+  .then(response => response.json())
+  .then(data => {
+    const selectProvin = document.getElementById("selectProvinModal");
+    const provincias = data.provincias;
+    provincias.forEach(provin => {
+      const op = document.createElement("option");
+      op.value = provin.id;
+      op.textContent = provin.nombre;
+      selectProvin.appendChild(op);
+    });
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON:', error);
+  });
+
+fetch('json/domicilio.json')
+  .then(response => response.json())
+  .then(data => {
+    const selectDistri = document.getElementById("selectDisModal");
+    const distritos = data.distritos;
+    distritos.forEach(distri => {
+      const op = document.createElement("option");
+      op.value = distri.id;
+      op.textContent = distri.nombre;
+      selectDistri.appendChild(op);
+    });
+  })
+  .catch(error => {
+    console.error('Error al cargar el archivo JSON:', error);
+  });
+
+
+
+function ocultarDiv(div) {
+  div.style.display = "none";
+}
+
+function mostrarDiv(div) {
+  div.style.display = "block";
+}
+
+const divs = {
+  divproVincia: document.getElementById("proVincia"),
+  divtipoVia: document.getElementById("tipoVia"),
+  divtipoInmue: document.getElementById("tipoInmue"),
+  divtipoZona: document.getElementById("tipoZona"),
+  divdeparTamentoo: document.getElementById("deparTamentoo"),
+  divDistritoo: document.getElementById("Distritoo"),
+  divnombreVia: document.getElementById("nombreVia"),
+  divnumeroInmueble: document.getElementById("numeroInmueble"),
+  divnumeroZona: document.getElementById("numeroZona"),
+  textArea: document.getElementById("textareaa"),
+};
+
+Object.values(divs).forEach(ocultarDiv);
+
+const selectPais = document.getElementById('selectPaisModal');
+const selectDepar = document.getElementById('selectDeparModal');
+const selectProvin = document.getElementById('selectProvinModal');
+const selectDis = document.getElementById('selectDisModal');
+
+selectPais.addEventListener('change', function () {
+  if (selectPais.value === 'p') {
+    mostrarDiv(divs.divdeparTamentoo);
+    ocultarDiv(divs.textArea);
+  } else if (selectPais.value === "o") {
+    mostrarDiv(divs.textArea);
+    ocultarDiv(divs.divdeparTamentoo);
+  }
+});
+
+selectDepar.addEventListener("change", function () {
+  const departID = selectDepar.value;
+  if (departID != "") {
+    mostrarDiv(divs.divproVincia);
+  }
+});
+
+selectProvin.addEventListener("change", function() {
+  const provinID = selectProvin.value;
+  if (provinID != "") {
+    mostrarDiv(divs.divDistritoo);
+  }
+})
+
+selectDis.addEventListener("change", function() {
+  const distriID = selectDis.value;
+  if (distriID != "") {
+    mostrarDiv(divs.divtipoVia);
+    mostrarDiv(divs.divtipoInmue);
+    mostrarDiv(divs.divtipoZona);
+    mostrarDiv(divs.divnombreVia);
+    mostrarDiv(divs.divnumeroInmueble);
+    mostrarDiv(divs.divnumeroZona);
+  }
+})
+
+
+
 
 
 
