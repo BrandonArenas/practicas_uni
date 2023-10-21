@@ -92,10 +92,8 @@
             <div class="lef-opci">
               <span>Semestre: </span><br />
               <select class="custom-select" id="selectSem">
-                <option>Selecciona una opcion</option>
                 <option value="1">20231</option>
                 <option value="2">20232</option>
-                <option value="3">20233</option>
               </select>
             </div>
             <p>
@@ -143,7 +141,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody id="agostoMes"></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -153,7 +151,7 @@
                 </div>
               </div>
             </div>
-            <div id="julioo" style="display: none">
+            <div id="julioo">
               <div class="mes" onclick="mostrarOcultar('julio')" id="julioo">
                 JULIO 2023
               </div>
@@ -168,7 +166,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody id="julioMes"></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -178,7 +176,7 @@
                 </div>
               </div>
             </div>
-            <div id="junioo" style="display: none">
+            <div id="junioo">
               <div class="mes" onclick="mostrarOcultar('junio')" id="junioo">
                 JUNIO 2023
               </div>
@@ -193,7 +191,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody id="junioMes"></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -203,7 +201,7 @@
                 </div>
               </div>
             </div>
-            <div id="mayoo" style="display: none">
+            <div id="mayoo">
               <div class="mes" onclick="mostrarOcultar('mayo')" id="mayoo">
                 MAYO 2023
               </div>
@@ -218,7 +216,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody id="mayoMes"></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -228,7 +226,7 @@
                 </div>
               </div>
             </div>
-            <div id="abrill" style="display: none">
+            <div id="abrill">
               <div class="mes" onclick="mostrarOcultar('abril')" id="abrill">
                 ABRIL 2023
               </div>
@@ -243,7 +241,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody id="abrilMes"></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -253,7 +251,7 @@
                 </div>
               </div>
             </div>
-            <div id="marzoo" style="display: none">
+            <div id="marzoo">
               <div class="mes" onclick="mostrarOcultar('marzo')" id="marzoo">
                 MARZO 2023
               </div>
@@ -268,7 +266,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody id="marzoMes"></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -278,7 +276,7 @@
                 </div>
               </div>
             </div>
-            <div id="febreroo" style="display: none">
+            <div id="febreroo">
               <div class="mes" onclick="mostrarOcultar('febrero')" id="febreroo">
                 FEBRERO 2023
               </div>
@@ -293,7 +291,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody id="febreroMes"></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -303,7 +301,7 @@
                 </div>
               </div>
             </div>
-            <div id="eneroo" style="display: none">
+            <div id="eneroo">
               <div class="mes" onclick="mostrarOcultar('enero')" id="eneroo">
                 ENERO 2023
               </div>
@@ -318,7 +316,7 @@
                       <th scope="col">ESTADO</th>
                     </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody id="eneroMes"></tbody>
                 </table>
                 <div class="resumen">
                   <p>
@@ -473,13 +471,13 @@
                                 <option value="p">Peru</option>
                                 <option value="o">Otros</option>
                               </select>
-                              <div id="proVincia">
+                              <div class="formuDomicilio" id="proVincia">
                                 <label for="selectProvinModal">Provincia</label>
                                 <select class="form-select" id="selectProvinModal">
                                   <option selected>
                                     ...
                                   </option>
-                                  
+
                                 </select>
                               </div>
                               <div id="tipoVia">
@@ -514,14 +512,14 @@
                                   <option selected>
                                     ...
                                   </option>
-                                  
+
                                 </select>
                               </div>
                               <div id="Distritoo">
                                 <label for="selectDisModal">Distrito</label>
                                 <select class="form-select" id="selectDisModal">
                                   <option selected>...</option>
-                                  
+
                                 </select>
                               </div>
                               <div id="nombreVia">
@@ -834,7 +832,6 @@
             <table class="table table-bordered" id="tbDatosprofe">
               <thead>
                 <tr>
-                  <th scope="col">Orden</th>
                   <th scope="col">Formación Profesional</th>
                   <th scope="col">País</th>
                   <th scope="col">Universidad</th>
@@ -844,7 +841,6 @@
                   <th scope="col">Grado Obtenido</th>
                   <th scope="col">Documento sustentatorio</th>
                   <th scope="col">Observación</th>
-                  <th scope="col">Opciones</th>
                 </tr>
               </thead>
               <tbody id="tbodyDatosprofe"></tbody>

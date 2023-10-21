@@ -85,41 +85,32 @@ function mostrarOcultar(id) {
 }
 
 const selectSemestre = document.getElementById("selectSem");
-const divAgosto = document.getElementById("agostoo");
-const divJulio = document.getElementById("julioo");
-const divJunio = document.getElementById("junioo");
-const divMayo = document.getElementById("mayoo");
-const divAbril = document.getElementById("abrill");
-const divMarzo = document.getElementById("marzoo");
-const divFebrero = document.getElementById("febreroo");
-const divEnero = document.getElementById("eneroo");
+const divMeses = {
+  enero: document.getElementById("eneroo"),
+  febrero: document.getElementById("febreroo"),
+  marzo: document.getElementById("marzoo"),
+  abril: document.getElementById("abrill"),
+  mayo: document.getElementById("mayoo"),
+  junio: document.getElementById("junioo"),
+  julio: document.getElementById("julioo"),
+  agosto: document.getElementById("agostoo"),
+};
 
 selectSemestre.addEventListener("change", function () {
   const valorSeleccionado = selectSemestre.value;
 
-  divEnero.style.display = "none";
-  divFebrero.style.display = "none";
-  divMarzo.style.display = "none";
-  divAbril.style.display = "none";
-  divMayo.style.display = "none";
-  divJunio.style.display = "none";
-  divJulio.style.display = "none";
-  divAgosto.style.display = "none";
+  for (const divmeses in divMeses) {
+    divMeses[divmeses].style.display = "none";
+  }
 
   switch (valorSeleccionado) {
     case "1":
-      divEnero.style.display = "block";
-      divFebrero.style.display = "block";
-      divMarzo.style.display = "block";
+      for (const divmeses in divMeses) {
+        divMeses[divmeses].style.display = "block";
+      }
       break;
     case "2":
-      divAbril.style.display = "block";
-      divMayo.style.display = "block";
-      divJunio.style.display = "block";
-      break;
-    case "3":
-      divJulio.style.display = "block";
-      divAgosto.style.display = "block";
+      divMeses.agosto.style.display = "block";
       break;
   }
 })
@@ -152,34 +143,6 @@ function cargarUsuarios() {
 //Llamar a la funcion
 cargarUsuarios()
 
-//Selecciona todos los elementos
-const tablasHora = document.querySelectorAll(".cont-tabla tbody");
-
-function cargarDatos() {
-  //Obtener datos desde un archivo JSON
-  fetch('json/datostab.json')
-    .then(archivo => archivo.json())//Formato 
-    .then(datos => {
-      //Itera a través de los datos
-      datos.forEach(dato => {
-        const row = document.createElement('tr');
-        row.innerHTML += `
-          <td>${dato.dia}</td>
-          <td>${dato.curso}</td>
-          <td>${dato.horario}</td>
-          <td>${dato.marcacion}</td>
-          <td>${dato.estado}</td>
-        `;
-        tablasHora.forEach(tabla => {
-          tabla.appendChild(row.cloneNode(true));
-        });
-      });
-    });
-}
-//Llamar a la funcion
-cargarDatos();
-
-
 //Seleccionar la tabla
 const tablaDomi = document.querySelector("#tbDomicilio tbody");
 
@@ -209,59 +172,29 @@ function cargarDatosdomicilio() {
 //Llamar a la funcion
 cargarDatosdomicilio()
 
-/*/Seleccionar la tabla
-const tablaProfe = document.querySelector("#tbDatosprofe tbody");
+//Paginacion en la tabla
+const datosProfesionales = [];//Guardar los datos en un array para la paginacion
 
-function cargarDatosprofesional() {
-  fetch('json/datosprofe.json')
-    .then(archivo => archivo.json())//Formato 
-    .then(datos => {
-      //Itera a través de los datos
-      datos.forEach(dato => {
-        const row = document.createElement('tr');
-        row.innerHTML += `
-      <td>${dato.orden}</td>
-      <td>${dato.formprofesional}</td>
-      <td>${dato.pais}</td>
-      <td>${dato.universidad}</td>
-      <td>${dato.especialidad}</td>
-      <td>${dato.fechinicio}</td>
-      <td>${dato.fechfinal}</td>
-      <td>${dato.gradoobte}</td>
-      <td>${dato.docsustenta}</td>
-      <td>${dato.Observacion}</td>
-      <td>${dato.opciones}</td>
-      `;
-        tablaProfe.appendChild(row);
-
-      });
-    })
-}
-//Llamar a la funcion
-cargarDatosprofesional()
-*/
-
-const datosProfesionales = [];
-
+//Funcion para la paginacion de la tabla
 function initializePagination() {
   $('#tbDatosprofe').pagination({
-    dataSource: datosProfesionales,
+    dataSource: datosProfesionales,//Datos
     pageSize: 2,
-    showPageNumbers: true,
-    showNavigator: true,
+    showPageNumbers: true,//Numero de la pagina
+    showNavigator: true,//Navegar en la pagina
     formatNavigator: '<br><span> Página <%= currentPage %> de <%= totalPage %> </span>',
     callback: function (data, pagination) {
       var $table = $('#tbDatosprofe').find('tbody');
       $table.empty();
       for (var i = 0; i < data.length; i++) {
         $table.append(
-          '<tr><td>' + data[i].formacionProf +
+          '<tr><td>' + data[i].selectedOption1 +
+          '</td><td>' + data[i].selectedOption2 +
           '</td><td>' + data[i].universidad +
-          '</td><td>' + data[i].fechaInicio +
-          '</td><td>' + data[i].gradoObtenido +
-          '</td><td>' + data[i].pais +
           '</td><td>' + data[i].especialidad +
+          '</td><td>' + data[i].fechaInicio +
           '</td><td>' + data[i].fechaFinal +
+          '</td><td>' + data[i].gradoObtenido +
           '</td><td>' + data[i].documentoSustentatorio +
           '</td><td>' + data[i].observacion + '</td></tr>');
       }
@@ -269,145 +202,72 @@ function initializePagination() {
   });
 };
 
-// Función para guardar datos
+//Función para guardar datos del formulario
 function guardarDatos() {
-  const formacionProf = document.getElementById("formacionProf").value;
+  const selectProfe = document.getElementById("formacionProf");
+  const selectedOption1 = selectProfe.options[selectProfe.selectedIndex].textContent;
   const universidad = document.getElementById("universidad").value;
   const fechaInicio = document.getElementById("fechaInicio").value;
   const gradoObtenido = document.getElementById("gradoObtenido").value;
-  const pais = document.getElementById("pais").value;
+  const selectPais = document.getElementById("pais");
+  const selectedOption2 = selectPais.options[selectPais.selectedIndex].textContent;
   const especialidad = document.getElementById("especialidad").value;
   const fechaFinal = document.getElementById("fechaFinal").value;
   const documentoSustentatorio = document.getElementById("documentoSustentatorio").value;
   const observacion = document.getElementById("observacion").value;
 
   const formDatospro = document.getElementById("formProfesional");
-  const tablaBody = document.getElementById("tbodyDatosprofe");
-
-  const fila = document.createElement("tr");
-
-  fila.innerHTML = `
-        <td>${formacionProf}</td>
-        <td>${universidad}</td>
-        <td>${fechaInicio}</td>
-        <td>${gradoObtenido}</td>
-        <td>${pais}</td>
-        <td>${especialidad}</td>
-        <td>${fechaFinal}</td>
-        <td>${documentoSustentatorio}</td>
-        <td>${observacion}</td>
-      `;
 
   const datos = {
-    formacionProf,
+    selectedOption1,
+    selectedOption2,
     universidad,
-    fechaInicio,
-    gradoObtenido,
-    pais,
     especialidad,
+    fechaInicio,
     fechaFinal,
+    gradoObtenido,
+    especialidad,
     documentoSustentatorio,
     observacion
   };
 
-  tablaBody.appendChild(fila);
   datosProfesionales.push(datos);
 
+  //Actualizar panigacion
   initializePagination();
 
   formDatospro.reset();
 }
-
+//Llamar a la funcion
 initializePagination();
 
 
-/*fetch('json/datostab.json')
-  .then(response => response.json())
-  .then(data => {
-    const tabla = document.getElementById('datosMeses');
-    const tbody = tabla.querySelector('tbody');
-
-    data.forEach(item => {
-      // Obtén la fecha del objeto y extrae el mes
-      const fecha = new Date(item.fecha);
-      const mes = fecha.toLocaleString('default', { month: 'long' });
-
-      // Crea una nueva fila en la tabla con los datos
-      const fila = document.createElement('tr');
-      fila.innerHTML = `
-        <td>${item.semestre}</td>
-        <td>${item.fecha}</td>
-        <td>${item.curso}</td>
-        <td>${item.estado}</td>
-        <td>${mes}</td>
-      `;
-
-      tbody.appendChild(fila);
+//Funcion para cargar los datos en los selects
+function cargarDatosSelect(urlJSON, idSelect, nomBre) {
+  //Solicitud fetch para obtener el JSON
+  fetch(urlJSON)
+    .then(response => response.json())
+    .then(data => {
+      const selectOption = document.getElementById(idSelect);
+      const opci = data[nomBre];
+      opci.forEach(datos => {
+        const op = document.createElement("option");
+        op.value = datos.id;
+        op.textContent = datos.nombre;
+        selectOption.appendChild(op);
+      });
+    })
+    .catch(error => {
+      console.error('No cargo el JSON:', error);
     });
-  })
-  .catch(error => {
-    console.error('Error al cargar el archivo JSON:', error);
-  });*/
-
-//Domicilio
-fetch('json/domicilio.json')
-  .then(response => response.json())
-  .then(data => {
-    const selectDepar = document.getElementById("selectDeparModal");
-    const departamentos = data.departamentos;
-    departamentos.forEach(depart => {
-      const op = document.createElement("option");
-      op.value = depart.id;
-      op.textContent = depart.nombre;
-      selectDepar.appendChild(op);
-    });
-  })
-  .catch(error => {
-    console.error('Error al cargar el archivo JSON:', error);
-  });
-
-fetch('json/domicilio.json')
-  .then(response => response.json())
-  .then(data => {
-    const selectProvin = document.getElementById("selectProvinModal");
-    const provincias = data.provincias;
-    provincias.forEach(provin => {
-      const op = document.createElement("option");
-      op.value = provin.id;
-      op.textContent = provin.nombre;
-      selectProvin.appendChild(op);
-    });
-  })
-  .catch(error => {
-    console.error('Error al cargar el archivo JSON:', error);
-  });
-
-fetch('json/domicilio.json')
-  .then(response => response.json())
-  .then(data => {
-    const selectDistri = document.getElementById("selectDisModal");
-    const distritos = data.distritos;
-    distritos.forEach(distri => {
-      const op = document.createElement("option");
-      op.value = distri.id;
-      op.textContent = distri.nombre;
-      selectDistri.appendChild(op);
-    });
-  })
-  .catch(error => {
-    console.error('Error al cargar el archivo JSON:', error);
-  });
-
-
-
-function ocultarDiv(div) {
-  div.style.display = "none";
 }
 
-function mostrarDiv(div) {
-  div.style.display = "block";
-}
+//Llamar a la funcion y agregar los valores
+cargarDatosSelect('json/domicilio.json', 'selectDeparModal', 'departamentos');
+cargarDatosSelect('json/domicilio.json', 'selectProvinModal', 'provincias');
+cargarDatosSelect('json/domicilio.json', 'selectDisModal', 'distritos');
 
+//Agregar domicilio
 const divs = {
   divproVincia: document.getElementById("proVincia"),
   divtipoVia: document.getElementById("tipoVia"),
@@ -421,7 +281,16 @@ const divs = {
   textArea: document.getElementById("textareaa"),
 };
 
-Object.values(divs).forEach(ocultarDiv);
+function mostrarDiv(div) {
+  div.style.display = "block";
+}
+
+function ocultarTodosLosDivs(divs) {
+  Object.values(divs).forEach(function (div) {
+    div.style.display = "none";
+  });
+}
+ocultarTodosLosDivs(divs)
 
 const selectPais = document.getElementById('selectPaisModal');
 const selectDepar = document.getElementById('selectDeparModal');
@@ -429,12 +298,11 @@ const selectProvin = document.getElementById('selectProvinModal');
 const selectDis = document.getElementById('selectDisModal');
 
 selectPais.addEventListener('change', function () {
+  ocultarTodosLosDivs(divs);
   if (selectPais.value === 'p') {
     mostrarDiv(divs.divdeparTamentoo);
-    ocultarDiv(divs.textArea);
   } else if (selectPais.value === "o") {
     mostrarDiv(divs.textArea);
-    ocultarDiv(divs.divdeparTamentoo);
   }
 });
 
@@ -445,24 +313,66 @@ selectDepar.addEventListener("change", function () {
   }
 });
 
-selectProvin.addEventListener("change", function() {
+selectProvin.addEventListener("change", function () {
   const provinID = selectProvin.value;
   if (provinID != "") {
     mostrarDiv(divs.divDistritoo);
   }
 })
 
-selectDis.addEventListener("change", function() {
+selectDis.addEventListener("change", function () {
   const distriID = selectDis.value;
   if (distriID != "") {
-    mostrarDiv(divs.divtipoVia);
-    mostrarDiv(divs.divtipoInmue);
-    mostrarDiv(divs.divtipoZona);
-    mostrarDiv(divs.divnombreVia);
-    mostrarDiv(divs.divnumeroInmueble);
-    mostrarDiv(divs.divnumeroZona);
+    for (const divss in divs) {
+      if (divss === "textArea") {
+        divs[divss].style.display = "none";
+      } else {
+        mostrarDiv(divs[divss]);
+      }
+    }
   }
 })
+
+//Mostrar datos en la tabla
+const mesesTbody = {
+  "01": document.getElementById("eneroMes"),
+  "02": document.getElementById("febreroMes"),
+  "03": document.getElementById("marzoMes"),
+  "04": document.getElementById("abrilMes"),
+  "05": document.getElementById("mayoMes"),
+  "06": document.getElementById("junioMes"),
+  "07": document.getElementById("julioMes"),
+  "08": document.getElementById("agostoMes"),
+};
+
+fetch('json/datostab.json')
+  .then(archivo => archivo.json())
+  .then(datos => {
+    datos.forEach(dato => {
+      const fecha = dato.fecha;
+      const mes = fecha.substring(5, 7);
+
+      if (mesesTbody[mes]) {
+        const tbody = mesesTbody[mes];
+        const row = document.createElement('tr');
+        row.innerHTML += `
+        <td>${dato.fecha}</td>
+        <td>${dato.curso}</td>
+        <td>${dato.horario}</td>
+        <td>${dato.marcacion}</td>
+        <td>${dato.estado === 1 ? '<img src="img/presente.png" alt="Presente">'
+            : (dato.estado === 2 ? '<img src="img/tardanza.png" alt="Tardanza">'
+              : '<img src="img/falta.png" alt="Falta">')}</td>
+        `;
+        tbody.appendChild(row);
+      }
+    });
+  });
+
+
+
+
+
 
 
 
